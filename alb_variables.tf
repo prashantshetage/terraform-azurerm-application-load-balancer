@@ -35,4 +35,9 @@ variable "subnet_id" {
   type        = string
   description = "(Required) The ID of the subnet to associate with the Application Load Balancer"
 }
+variable "alb_frontend_name" {
+  type        = string
+  description = "(Required) The name of the frontend configuration for the Application Load Balancer"
+  default     = "frontend-config"
+}
 //**********************************************************************************************

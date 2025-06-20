@@ -20,3 +20,12 @@ resource "azurerm_application_load_balancer_subnet_association" "alb" {
   subnet_id                    = var.subnet_id
 }
 //**********************************************************************************************
+
+
+// ALB Frontend Configuration
+//**********************************************************************************************
+resource "azurerm_application_load_balancer_frontend" "alb" {
+  name                         = var.alb_frontend_name
+  application_load_balancer_id = azurerm_application_load_balancer.alb.id
+}
+//**********************************************************************************************
